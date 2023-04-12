@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Carlos Roa/Desktop/webdriver_java">
+        <classes>
+            <class name="login.LoginTests">
+                <methods>
+                    <include name="testLogin"/>
+                        <parameter name="username" value="carlos.roa@pyxis.tech"/>
+                        <parameter name="password" value="Pyxis*2023"/>
+                    <include name="testCreateBoard"/>
+                        <parameter name="titleBoard" value="BoardDemo2023"/>
+                    <include name="testCreateList"/>
+                        <parameter name="nameListNew" value="ListDemo"/>
+                    <include name="testCreateCard"/>
+                        <parameter name="nameCardNew" value="CardDemo1"/>
+                    <include name="LogOut"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
