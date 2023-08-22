@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage {
     private WebDriver driver;
-    WebDriverWait wait;
+
 
     //Login
     private final By buttonStart = By.xpath("//*[@class = \"Buttonsstyles__Button-sc-1jwidxo-0 kTwZBr\"]");
@@ -19,10 +19,8 @@ public class LoginPage {
 
     // Board
     private final By titleHomeTrello = By.xpath("//*[@class=\"boards-page-section-header-name\"]");
-
-    private final By buttonPerfil = By.xpath("//*[@class = \"OUdAuicP657Tka\"]");
-    private final By emailUser = By.xpath("//*[@class = \"Ej7WGzTnvdxL7I\"]");
-
+    private final By buttonPerfil = By.xpath("//*[@class = \"DweEFaF5owOe02 pMvTtmeStXaSEs V_PnoJ2AynVwLp G6CmOLx93OUZez\"]");
+    private final By emailUser = By.xpath("//*[@class = \"AS8ZlkEoqFiwD_\"]");
 
     public LoginPage(WebDriver driver){
         this.driver = driver;
@@ -59,10 +57,10 @@ public class LoginPage {
         new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(emailUser)).click();
         return driver.findElement(emailUser).getText();
     }
-    /*public String getTitleHomeTrello(){
+    public String getTitleHomeTrello(){
         new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(titleHomeTrello)).click();
         return driver.findElement(titleHomeTrello).getText();
-    }*/
+    }
     /*public BoardPage btnCreateBoard(){
         driver.findElement(btnCreateBoard).click();
         new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(btnCreateBoard)).click();

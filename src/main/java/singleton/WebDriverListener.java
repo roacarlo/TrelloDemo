@@ -5,39 +5,62 @@ import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
 import org.testng.ITestResult;
 
-//import com.tests.test.assignment.LocalDriverFactory;
-//import com.tests.test.assignment.DriverSingleton;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.io.File;
+import java.util.Date;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.OutputType;
+import com.google.common.io.Files;
+import java.io.IOException;
+
 public class WebDriverListener implements IInvokedMethodListener {
 
-    /*public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
+    WebDriver driver;
 
-        if (method.isTestMethod()) {
-            // get the browser name from testng.xml
-            String browserName = method.getTestMethod().getXmlTest().getLocalParameters().get("browserName");
-
-            // Crear la instancia Chrome
-            WebDriver driver = LocalDriverFactory.createInstance(browserName);
-
-            // set the singleton instance
-            DriverSingleton.setWebDriver(driver);
-        }
-    }*/
     public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
+
         if (method.isTestMethod()) {
-            WebDriver driver = DriverSingleton.getDriver();
+            driver = DriverSingleton.getDriver();
             if (driver == null) {
                 String browserName = method.getTestMethod().getXmlTest().getLocalParameters().get("browserName");
-                driver = LocalDriverFactory.createInstance(browserName);
+
+                String aux = method.getTestMethod().getXmlTest().getLocalParameters().get("modeHeadless");
+                Boolean modeHeadless = Boolean.parseBoolean(aux);
+
+                driver = LocalDriverFactory.createInstance(browserName,modeHeadless);
                 DriverSingleton.setWebDriver(driver);
             }
+
         }
     }
-
     public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
-        if (method.isTestMethod()) {
+        takeScreenshot(testResult);
+
+        /*if (method.isTestMethod()) {
             WebDriver driver = DriverSingleton.getDriver();
             if (driver != null) {
-                //driver.quit();
+                driver.quit();
+            }
+        }*/
+
+    }
+
+    public void takeScreenshot(ITestResult result){
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+
+        if(ITestResult.FAILURE == result.getStatus())
+        {
+            var camera = (TakesScreenshot)driver;
+            File screenshot = camera.getScreenshotAs(OutputType.FILE);
+            try{
+                //Files.move(screenshot, new File("./Bugs/screenshots/" + result.getName() + ".png"));
+                Files.move(screenshot, new File("./Bugs/screenshots/" + result.getName() + "_" + df.format(date) + ".png"));
+
+            }catch(IOException e){
+                e.printStackTrace();
             }
         }
     }
