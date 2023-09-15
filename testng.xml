@@ -6,13 +6,13 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="C:/Users/Carlos Roa/Desktop/webdriver_java">
             <parameter name="browserName" value="chrome"/>
-            <parameter name="modeHeadless" value="true"/>
+            <parameter name="modeHeadless" value="false"/>
         <classes>
             <class name="login.LoginTests">
                 <methods>
                     <include name="testLogin"/>
                         <parameter name="username" value="carlos.roa@pyxis.tech"/>
-                        <parameter name="password" value="Pyxis*2023"/>
+                        <parameter name="password" value="Pyxis*2023..................."/>
                 </methods>
             </class>
             <class name="board.BoardTests">
@@ -31,6 +31,11 @@
                 <methods>
                     <include name="testCreateCard"/>
                     <parameter name="nameCard" value="Diagnostico inicial"/>
+                </methods>
+            </class>
+            <class name="logout.LogOutTests">
+                <methods>
+                    <include name="testLogOut"/>
                 </methods>
             </class>
         </classes>
