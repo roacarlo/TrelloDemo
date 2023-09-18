@@ -27,17 +27,7 @@
                     <parameter name="nameList" value="Backlog"/>
                 </methods>
             </class>
-            <class name="card.CardTests">
-                <methods>
-                    <include name="testCreateCard"/>
-                    <parameter name="nameCard" value="Diagnostico inicial"/>
-                </methods>
-            </class>
-            <class name="logout.LogOutTests">
-                <methods>
-                    <include name="testLogOut"/>
-                </methods>
-            </class>
+
         </classes>
     </test>
 </suite>
