@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SuiteTrello">
     <listeners>
-        <listener class-name="singleton.WebDriverListener">    </listener>
+        <listener class-name="singleton.WebDriverListener">  </listener>
     </listeners>
     <test verbose="2" preserve-order="true" name="C:/Users/Carlos Roa/Desktop/webdriver_java">
             <parameter name="browserName" value="chrome"/>
@@ -12,7 +12,7 @@
                 <methods>
                     <include name="testLogin"/>
                         <parameter name="username" value="carlos.roa@pyxis.tech"/>
-                        <parameter name="password" value="Pyxis*2023..................."/>
+                        <parameter name="password" value="Pyxis*2023"/>
                 </methods>
             </class>
             <class name="board.BoardTests">
@@ -27,7 +27,12 @@
                     <parameter name="nameList" value="Backlog"/>
                 </methods>
             </class>
-
+            <class name="card.CardTests">
+                <methods>
+                    <include name="testCreateCard"/>
+                    <parameter name="nameCard" value="Diagnostico_inicial"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
