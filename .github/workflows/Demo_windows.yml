@@ -10,6 +10,6 @@ jobs:
   my-job:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@V2
+      - uses: actions/checkout@V3
       - name: step_Ejemplo_windows-latest
         run: echo "Hello World...MASTER !"
