@@ -12,4 +12,4 @@ jobs:
     steps:
       #- uses: actions/checkout@V3
       - name: Ejemplo_ubuntu-latest
-        run: echo "Hello World...MASTER !"
+        run: echo "Hello World...MASTER Ejemplo (ubuntu-latest)"
