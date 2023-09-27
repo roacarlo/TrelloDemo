@@ -12,4 +12,4 @@ jobs:
     steps:
      # - uses: actions/checkout@V3
       - name: step_Ejemplo_windows-latest
-        run: echo "Hello World...MASTER !"
+        run: echo "Hello World...MASTER Ejemplo (windows-latest)"
