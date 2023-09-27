@@ -33,6 +33,11 @@
                     <parameter name="nameCard" value="Diagnostico_inicial"/>
                 </methods>
             </class>
+            <class name="logout.LogOutTests">
+                <methods>
+                    <include name="testLogOut"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
