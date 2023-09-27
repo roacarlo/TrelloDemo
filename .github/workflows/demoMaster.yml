@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       #- uses: actions/checkout@V3
-      - name: step_Ejemplo_ubuntu-latest
+      - name: Ejemplo_ubuntu-latest
         run: echo "Hello World...MASTER !"
