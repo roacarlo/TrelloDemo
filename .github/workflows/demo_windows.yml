@@ -7,7 +7,7 @@ name: Ejemplo_windows-latest
     branches:
       - master
 jobs:
-  my-job:
+  my-job-windows:
     runs-on: windows-latest
     steps:
      # - uses: actions/checkout@V3
