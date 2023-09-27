@@ -7,7 +7,7 @@ name: Ejemplo_ubuntu-latest
     branches:
       - master
 jobs:
-  my-job:
+  my-job-ubuntu:
     runs-on: ubuntu-latest
     steps:
       #- uses: actions/checkout@V3
