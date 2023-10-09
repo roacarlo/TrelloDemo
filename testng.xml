@@ -33,6 +33,7 @@
                     <parameter name="nameCard" value="Diagnostico_inicial"/>
                 </methods>
             </class>
+
         </classes>
     </test>
 </suite>
