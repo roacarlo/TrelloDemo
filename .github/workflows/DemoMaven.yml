@@ -19,5 +19,5 @@ jobs:
       distribution: 'temurin'
       architecture: x64
       
-  - name: Build with Maven
+  - name: Ejecutar_testng
     run: mvn test -DsuiteFile="testng.xml"
