@@ -15,4 +15,5 @@ jobs:
         java-version: 19
         distribution: 'temurin'
     - name: Build with Maven
-      run: mvn -B package --file testng.xml
+      #run: mvn -B package --file testng.xml
+      run: mvn clean test -Dsurefire.suiteXmlFiles=/path/to/testng.xml
