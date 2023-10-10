@@ -11,8 +11,8 @@
     <properties>
         <maven.compiler.target>1.12</maven.compiler.target>
         <maven.compiler.source>1.12</maven.compiler.source>
+        <java.version>19</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
