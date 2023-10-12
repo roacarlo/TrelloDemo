@@ -1,5 +1,4 @@
-name: demo
- 
+name: demo 
 on:
   push:
     branches: [ master ]
