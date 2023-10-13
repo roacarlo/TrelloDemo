@@ -12,9 +12,9 @@ public class LoginPage {
 
     //Login
     private final By buttonStart = By.xpath("//*[@class = \"Buttonsstyles__Button-sc-1jwidxo-0 kTwZBr\"]");
-    private final By usernameField = By.id("user");
+    private final By usernameField = By.xpath("//*[@id=\"username\"]");
     private final By passwordField = By.xpath("//*[@id=\"password\"]");
-    private final By buttonContinue = By.id("login");
+    private final By buttonContinue = By.xpath("//*[@id=\"login-submit\"]");
     private final By buttonLogin = By.xpath("//*[@id=\"login-submit\"]");
 
     // Board
@@ -32,9 +32,11 @@ public class LoginPage {
         return new LoginPage(driver);
     }
     public void setUsername(String user){
+        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(usernameField)).click();
         driver.findElement(usernameField).sendKeys(user);
     }
     public LoginPage clicContinueButton(){
+        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(buttonContinue)).click();
         driver.findElement(buttonContinue).click();
         return new LoginPage(driver);
     }
