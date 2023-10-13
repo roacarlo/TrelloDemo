@@ -14,17 +14,10 @@ public class BoardPage {
     private final By linkAddBoard = By.xpath("//*[@class=\"board-tile mod-add\"]");
     private final By txtTitleBoardField = By.xpath("//*[@class = \"nch-textfield__input lsOhPsHuxEMYEb lsOhPsHuxEMYEb VkPAAkbpkKnPst\"]");
     private final By buttonCreateBoard = By.xpath("//*[@class=\"hY6kPzdkHFJhfG bxgKMAm3lq5BpA SdamsUKjxSBwGb SEj5vUdI3VvxDc\"]");
-    //private final By nameBoardCreate = By.id("board");
-   // private final By titleBoardNew = By.xpath("//*[@id=\"content\"]//*[@class = \"HKTtBLwDyErB_o\"]");
-    private final By nameBoardCreate = By.id("board");
-    private final By titleBoardNew = By.xpath("//*[@class = \"HKTtBLwDyErB_o\"]");
 
-
-
-
-
-
-
+    private final By titleBoardNew = By.xpath("//*[@id=\"content\"]//*[@class='HKTtBLwDyErB_o']");
+    private final By nameBoardCreate = By.xpath("//*[@data-testid='board-name-display']");
+    //private final By titleBoardNew = By.xpath("//*[@id=\"content\"]//*[@class='HKTtBLwDyErB_o']");
 
 
 
@@ -33,11 +26,7 @@ public class BoardPage {
     }
 
 
-    // Board
-    /*public BoardPage clicClosePerfil(){
-        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(btnClosePerfil)).click();
-        return new BoardPage(driver);
-    }*/
+
     public BoardPage linkAddBoard(){
         new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(linkAddBoard)).click();
         return new BoardPage(driver);
@@ -52,7 +41,8 @@ public class BoardPage {
     }
 
     public String getTittleBoardNew(){//Obtener titulo board creado
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(nameBoardCreate)).click();
-        return driver.findElement(titleBoardNew).getText();
+        //new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(nameBoardCreate)).click();
+        //return driver.findElement(titleBoardNew).getText();
+        return new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(nameBoardCreate)).getText();
     }
 }

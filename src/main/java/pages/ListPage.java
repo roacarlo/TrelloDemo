@@ -9,7 +9,8 @@ public class ListPage {
     private WebDriver driver;
 
     ///////////////////List
-    private final By linkAddList = By.xpath("//*[@class=\"placeholder\"]");
+    private final By nameBoardCreate = By.xpath("//*[@data-testid='board-name-display']");
+    private final By linkAddList = By.xpath("//*[@id=\"board\"]//*[@class=\"placeholder\"]");
     private final By nameListField = By.xpath("//*[@id=\"board\"]//*[@class = \"list-name-input\"]");
     private final By buttonAddList = By.xpath("//*[@id=\"board\"]//*[@class = \"nch-button nch-button--primary mod-list-add-button js-save-edit\"]");
     private final By nameListCreate = By.xpath("//*[@id=\"board\"]//*[@class=\"list-header-name mod-list-name js-list-name-input\"]");
@@ -19,7 +20,8 @@ public class ListPage {
     }
     // List
     public ListPage clickAddList(){
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(linkAddList)).click();
+        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(nameBoardCreate)).getText();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(linkAddList)).click();
         return new ListPage(driver);
     }
 
