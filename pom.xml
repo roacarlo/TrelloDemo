@@ -17,6 +17,7 @@
                   <version>3.1.2</version>
                   <configuration>
                            <suiteXmlFiles>
+                                    <trimStackTrace>false</trimStackTrace>
                                     <suiteXmlFile>testng.xml</suiteXmlFile>
                            </suiteXmlFiles>
                   </configuration>
