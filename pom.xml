@@ -16,8 +16,6 @@
                   <artifactId>maven-surefire-plugin</artifactId>
                   <version>3.1.2</version>
                   <configuration>
-                           <runOrder>alphabetical</runOrder>
-                           <useSystemClassLoader>false</useSystemClassLoader>
                            <suiteXmlFiles>
                                     <suiteXmlFile>testng.xml</suiteXmlFile>
                            </suiteXmlFiles>
