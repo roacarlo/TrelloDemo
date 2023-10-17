@@ -6,7 +6,7 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="C:/Users/Carlos Roa/Desktop/webdriver_java">
             <parameter name="browserName" value="chrome"/>
-            <parameter name="modeHeadless" value="false"/>
+            <parameter name="modeHeadless" value="true"/>
         <classes>
             <class name="login.LoginTests">
                 <methods>
