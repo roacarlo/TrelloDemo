@@ -17,8 +17,6 @@
                   <version>3.1.2</version>
                   <configuration>
                            <suiteXmlFiles>
-                                    <runOrder>alphabetical</runOrder>
-                                    <useSystemClassLoader>false</useSystemClassLoader>
                                     <suiteXmlFile>testng.xml</suiteXmlFile>
                            </suiteXmlFiles>
                   </configuration>
