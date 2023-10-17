@@ -1,4 +1,4 @@
-name: demo 
+name: demo_Trello_Maven 
 on:
   push:
     branches: [ master ]
