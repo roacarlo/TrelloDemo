@@ -15,11 +15,12 @@
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-surefire-plugin</artifactId>
                   <version>3.1.2</version>
-                  <configuration>                            
+                  <configuration>
+                           <runOrder>alphabetical</runOrder>
+                           <useSystemClassLoader>false</useSystemClassLoader>
                            <suiteXmlFiles>
                                     <suiteXmlFile>testng.xml</suiteXmlFile>
                            </suiteXmlFiles>
-                           <useSystemClassLoader>false</useSystemClassLoader>
                   </configuration>
              </plugin>   
          </plugins>
