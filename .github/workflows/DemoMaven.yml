@@ -20,10 +20,12 @@ jobs:
         distribution: 'temurin'
         
     - name: Build with Maven
-      #run: mvn -B package --file testng.xml
+      
       ####### run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
-      #run: mvn clean test -Dsurefire.suiteXmlFiles=/path/to/testng.xml
-      run: mvn clean test -DmyTestNGFile=testng.xml
-      #run: mvn clean test -DxmlFilePath=src/main/java/testng.xml
+      ##run: mvn clean test -DmyTestNGFile=testng.xml
+
+      #run: mvn -B package --file testng.xml
+      #run: mvn clean test -Dsurefire.suiteXmlFiles=/path/to/testng.xml      
+      run: mvn clean test -DxmlFilePath=src/main/java/testng.xml
       
       #run: mvn -B package --file pom.xml
