@@ -17,7 +17,7 @@ jobs:
       with:
         java-version: '19'
         distribution: 'temurin'      
-    - name: Build with Maven      
+    - name: Ejecution Tests with Maven      
       run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
       ##run: mvn clean test -DmyTestNGFile=testng.xml
       #run: mvn clean test -DxmlFilePath=src/main/java/testng.xml
