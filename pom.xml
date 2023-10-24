@@ -20,8 +20,9 @@
                            <suiteXmlFiles>
                                  <suiteXmlFile>testng.xml</suiteXmlFile>
                              </suiteXmlFiles>
+                           <useSystemClassLoader>false</useSystemClassLoader>
                      </configuration>
-                     <useSystemClassLoader>false</useSystemClassLoader>
+                     
             </plugin>
         </plugins>
     </build>
