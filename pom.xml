@@ -48,10 +48,10 @@
             <scope>compile</scope>
         </dependency>
          <dependency>
-                  <groupId>junit</groupId>
-                  <artifactId>junit</artifactId>
-                  <version>5.5.2</version>
-                  <scope>test</scope>
+                  <groupId>junit</groupId> 
+        <artifactId>junit</artifactId> 
+        <versión>4.12</versión> 
+        <scope>test</scope> 
          </dependency>
     </dependencies>
 </project>
