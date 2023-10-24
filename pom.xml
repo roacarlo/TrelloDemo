@@ -16,11 +16,12 @@
                 <artifactId>junit-jupiter</artifactId>
                <version>5.5.2</version>
                   <configuration>
-                             <useSystemClassLoader>false</useSystemClassLoader>
+                             
                            <suiteXmlFiles>
                                  <suiteXmlFile>testng.xml</suiteXmlFile>
                              </suiteXmlFiles>
-                     </configuration>  
+                     </configuration>
+                     <useSystemClassLoader>false</useSystemClassLoader>
             </plugin>
         </plugins>
     </build>
