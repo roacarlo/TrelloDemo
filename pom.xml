@@ -24,7 +24,7 @@
                          <dependency>
                              <groupId>org.junit.jupiter</groupId>
                              <artifactId>junit-jupiter-engine</artifactId>
-                             <version>5.0.0</version>
+                             <version>5.5.2</version>
                          </dependency>
                   </dependencies>
                      
@@ -48,7 +48,6 @@
             <artifactId>selenium-chrome-driver</artifactId>
             <version>3.141.59</version>
         </dependency>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-support</artifactId>
@@ -59,7 +58,6 @@
             <artifactId>testng</artifactId>
             <version>6.14.3</version>
             <scope>compile</scope>
-        </dependency>
-         
+        </dependency>         
     </dependencies>
 </project>
