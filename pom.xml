@@ -17,6 +17,9 @@
                <version>5.5.2</version>
                   <configuration>
                              <useSystemClassLoader>false</useSystemClassLoader>
+                           <suiteXmlFiles>
+                                 <suiteXmlFile>testng.xml</suiteXmlFile>
+                             </suiteXmlFiles>
                      </configuration>  
             </plugin>
         </plugins>
