@@ -16,7 +16,8 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '19'
-        distribution: 'temurin'      
+        distribution: 'temurin'    
+        
     - name: Ejecution Tests with Maven      
       run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
       ##run: mvn clean test -DmyTestNGFile=testng.xml
