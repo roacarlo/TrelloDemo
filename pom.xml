@@ -50,7 +50,7 @@
          <dependency>
                   <groupId>junit</groupId> 
         <artifactId>junit</artifactId> 
-        <versión>4.12</versión> 
+        <version>4.12</version> 
         <scope>test</scope> 
          </dependency>
     </dependencies>
