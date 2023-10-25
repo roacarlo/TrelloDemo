@@ -26,7 +26,7 @@ public abstract class LocalDriverFactory{
 
         if (browserName.toLowerCase().contains("chrome")) {
             //System.setProperty("webdriver.chrome.driver","C:\\Users\\s.gainewar\\Documents\\Custom Office Templates\\chromedriver_win32\\chromedriver.exe");
-            System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
             //driver = new ChromeDriver();
             // nuevo
             driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions(headless)));
