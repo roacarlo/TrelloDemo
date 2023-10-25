@@ -35,8 +35,7 @@ public class WebDriverListener implements IInvokedMethodListener {
         }
     }
     public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
-        //takeScreenshot(testResult);
-
+        takeScreenshot(testResult);
         /*if (method.isTestMethod()) {
             WebDriver driver = DriverSingleton.getDriver();
             if (driver != null) {
