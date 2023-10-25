@@ -122,22 +122,22 @@ public class EventReporter implements WebDriverEventListener {
 
     }
 
-    @Override
+    //@Override
     public <X> void beforeGetScreenshotAs(OutputType<X> outputType) {
 
     }
 
-    @Override
+    //@Override
     public <X> void afterGetScreenshotAs(OutputType<X> outputType, X x) {
 
     }
 
-    @Override
+    //@Override
     public void beforeGetText(WebElement webElement, WebDriver webDriver) {
 
     }
 
-    @Override
+    //@Override
     public void afterGetText(WebElement webElement, WebDriver webDriver, String s) {
 
     }

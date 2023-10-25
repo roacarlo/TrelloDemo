@@ -12,13 +12,13 @@
                 <methods>
                     <include name="testLogin"/>
                         <parameter name="username" value="carlos.roa@pyxis.tech"/>
-                        <parameter name="password" value="Pyxis*2023"/>
+                        <parameter name="password" value="Pyxis*2023*"/>
                 </methods>
             </class>
             <class name="board.BoardTests">
                 <methods>
                     <include name="testCreateBoard"/>
-                        <parameter name="titleBoard" value="BoardDemo2023_Oct"/>
+                        <parameter name="titleBoard" value="BoardDemo2023_Nov"/>
                 </methods>
             </class>
             <class name="list.ListTests">
