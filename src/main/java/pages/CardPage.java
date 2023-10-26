@@ -9,11 +9,12 @@ public class CardPage {
 
     private WebDriver driver;
 
-    // Card
-    private final By linkAddCard = By.xpath("//*[@id=\"board\"]//*[@class = \"js-add-a-card\"]");
-    private final By nameCardField = By.xpath("//*[@id=\"board\"]//*[@class = \"list-card-composer-textarea js-card-title\"]");
-    private final By buttonAddCard = By.xpath("//*[@id=\"board\"]/div//*[@class = \"nch-button nch-button--primary confirm mod-compact js-add-card\"]");
-    private final By nameCardCreate = By.xpath("//*[@class = \"list-card-title js-card-name\"]");
+    //private final By linkAddCard = By.xpath("//*[@id=\"board\"]//*[@data-testid=\"list-add-card-button\"]");
+    private final By linkAddCard = By.xpath("//*[@id=\"board\"]//*[@class=\"O9vivwyDxMqo3q bxgKMAm3lq5BpA iUcMblFAuq9LKn PnEv2xIWy3eSui SEj5vUdI3VvxDc\"]");
+    private final By nameCardField = By.xpath("//*[@id=\"board\"]/li/div/ol/form/textarea");
+    private final By buttonAddCard = By.xpath("//*[@id=\"board\"]//*[@class='bxgKMAm3lq5BpA SdamsUKjxSBwGb SEj5vUdI3VvxDc']");
+
+    private final By nameCardCreate = By.xpath("//*[@id=\"board\"]//*[@class=\"NdQKKfeqJDDdX3\"]");
 
     public CardPage(WebDriver driver){
         this.driver = driver;
@@ -21,17 +22,16 @@ public class CardPage {
 
     // Card
     public CardPage clickAddCard(){
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(linkAddCard)).click();
+        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(linkAddCard)).click();
         return new CardPage(driver);
     }
-    public void setNameCard(String nameCard){
-        //String nameCard="Analisis migración";
+    public void  setNameCard(String nameCard){
         new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(nameCardField)).click();
         driver.findElement(nameCardField).sendKeys(nameCard);
     }
     public CardPage clickCreateCard(){
         new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(buttonAddCard)).click();
-        driver.findElement(buttonAddCard).click();
+        //driver.findElement(buttonAddCard).click();
         return new CardPage(driver);
     }
     public String getNameCardCreate(){

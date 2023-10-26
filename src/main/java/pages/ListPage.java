@@ -13,11 +13,11 @@ public class ListPage {
     private final By linkAddList = By.xpath("//*[@id=\"board\"]//*[@class=\"placeholder\"]");
 
     private final By board = By.xpath("//*[@id=\"board\"]");
-    private final By nameListField = By.xpath("//*[@id=\"board\"]/div/form/a/span");
-    private final By nameListFieldInput = By.xpath("//*[@id=\"board\"]/div/form/input");
+    private final By nameListField = By.xpath("//*[@id=\"board\"]/div/button");
+    private final By nameListFieldInput = By.xpath("//*[@id=\"board\"]/div[1]/form/textarea");
 
-    private final By buttonAddList = By.xpath("//*[@id=\"board\"]//*[@class = \"nch-button nch-button--primary mod-list-add-button js-save-edit\"]");
-    private final By nameListCreate = By.xpath("//*[@id=\"board\"]//*[@class=\"list-header-name mod-list-name js-list-name-input\"]");
+    private final By buttonAddList = By.xpath("//*[@id=\"board\"]//*[@class='bxgKMAm3lq5BpA SdamsUKjxSBwGb SEj5vUdI3VvxDc']");
+    private final By nameListCreate = By.xpath("//*[@id=\"board\"]//*[@class='KLvU2mDGTQrsWG']");
 
     public ListPage(WebDriver driver){
         this.driver = driver;

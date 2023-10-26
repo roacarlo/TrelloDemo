@@ -107,12 +107,12 @@ public class EventReporter implements WebDriverEventListener {
 
     }
 
-    @Override
+    //@Override
     public void beforeSwitchToWindow(String s, WebDriver webDriver) {
 
     }
 
-    @Override
+    //@Override
     public void afterSwitchToWindow(String s, WebDriver webDriver) {
 
     }
