@@ -97,12 +97,12 @@ public class EventReporter implements WebDriverEventListener {
 
     }
 
-    @Override
+    //@Override
     public void beforeScript(String s, WebDriver webDriver) {
 
     }
 
-    @Override
+   // @Override
     public void afterScript(String s, WebDriver webDriver) {
 
     }
@@ -117,7 +117,7 @@ public class EventReporter implements WebDriverEventListener {
 
     }
 
-    @Override
+   // @Override
     public void onException(Throwable throwable, WebDriver webDriver) {
 
     }
