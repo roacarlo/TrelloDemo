@@ -1,13 +1,12 @@
 package board;
 
 import org.openqa.selenium.WebDriver;
-
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.BoardPage;
 import singleton.DriverSingleton;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 public class BoardTests{
     protected WebDriver driver;
     BoardPage boardPage;

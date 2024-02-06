@@ -18,7 +18,7 @@
             <class name="board.BoardTests">
                 <methods>
                     <include name="testCreateBoard"/>
-                        <parameter name="titleBoard" value="BoardDemo2023_Nov"/>
+                        <parameter name="titleBoard" value="BoardDemo2024_Enero"/>
                 </methods>
             </class>
             <class name="list.ListTests">

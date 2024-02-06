@@ -2,8 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class LoginPage {
@@ -19,7 +19,7 @@ public class LoginPage {
 
     // Board
     private final By titleHomeTrello = By.xpath("//*[@class=\"boards-page-section-header-name\"]");
-    private final By buttonPerfil = By.xpath("//*[@class = \"DweEFaF5owOe02 pMvTtmeStXaSEs V_PnoJ2AynVwLp G6CmOLx93OUZez\"]");
+    private final By buttonPerfil = By.xpath("//*[@class = \"DweEFaF5owOe02 V_PnoJ2AynVwLp G6CmOLx93OUZez\"]");
     private final By emailUser = By.xpath("//*[@class = \"AS8ZlkEoqFiwD_\"]");
 
     public LoginPage(WebDriver driver){

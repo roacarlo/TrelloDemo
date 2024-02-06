@@ -1,18 +1,18 @@
 package singleton;
 
+import com.google.common.io.Files;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
 import org.testng.ITestResult;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.io.File;
 import java.util.Date;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.OutputType;
-import com.google.common.io.Files;
-import java.io.IOException;
 
 public class WebDriverListener implements IInvokedMethodListener {
 
@@ -55,7 +55,6 @@ public class WebDriverListener implements IInvokedMethodListener {
             var camera = (TakesScreenshot)driver;
             File screenshot = camera.getScreenshotAs(OutputType.FILE);
             try{
-                //Files.move(screenshot, new File("./Bugs/screenshots/" + result.getName() + ".png"));
                 Files.move(screenshot, new File("./Bugs/screenshots/" + result.getName() + "_" + df.format(date) + ".png"));
 
             }catch(IOException e){

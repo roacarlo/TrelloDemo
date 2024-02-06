@@ -10,11 +10,12 @@ public class CardPage {
     private WebDriver driver;
 
     //private final By linkAddCard = By.xpath("//*[@id=\"board\"]//*[@data-testid=\"list-add-card-button\"]");
-    private final By linkAddCard = By.xpath("//*[@id=\"board\"]//*[@class=\"O9vivwyDxMqo3q bxgKMAm3lq5BpA iUcMblFAuq9LKn PnEv2xIWy3eSui SEj5vUdI3VvxDc\"]");
-    private final By nameCardField = By.xpath("//*[@id=\"board\"]/li/div/ol/form/textarea");
-    private final By buttonAddCard = By.xpath("//*[@id=\"board\"]//*[@class='bxgKMAm3lq5BpA SdamsUKjxSBwGb SEj5vUdI3VvxDc']");
+    private final By AddCard = By.xpath("//*[@class=\"O9vivwyDxMqo3q bxgKMAm3lq5BpA iUcMblFAuq9LKn PnEv2xIWy3eSui SEj5vUdI3VvxDc\"]");
+    private final By nameCardField = By.xpath("//*[@class=\"qJv26NWQGVKzI9\"]");
+    private final By createAddCard = By.xpath("//*[@class=\"bxgKMAm3lq5BpA SdamsUKjxSBwGb SEj5vUdI3VvxDc\"]");
 
-    private final By nameCardCreate = By.xpath("//*[@id=\"board\"]//*[@class=\"NdQKKfeqJDDdX3\"]");
+
+    private final By nameCardCreate = By.xpath("//*[@class=\"NdQKKfeqJDDdX3\"]");
 
     public CardPage(WebDriver driver){
         this.driver = driver;
@@ -22,16 +23,16 @@ public class CardPage {
 
     // Card
     public CardPage clickAddCard(){
-        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(linkAddCard)).click();
+        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(AddCard)).click();
         return new CardPage(driver);
     }
     public void  setNameCard(String nameCard){
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(nameCardField)).click();
         driver.findElement(nameCardField).sendKeys(nameCard);
     }
     public CardPage clickCreateCard(){
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(buttonAddCard)).click();
-        //driver.findElement(buttonAddCard).click();
+        driver.findElement(AddCard).click();
+        driver.findElement(createAddCard).click();
+        //new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(createAddCard)).click();
         return new CardPage(driver);
     }
     public String getNameCardCreate(){

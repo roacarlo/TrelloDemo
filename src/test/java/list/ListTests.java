@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.ListPage;
 import singleton.DriverSingleton;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 public class ListTests {
 
     protected WebDriver driver;

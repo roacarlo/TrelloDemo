@@ -4,10 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-
-import static org.testng.Assert.*;
-
 import singleton.DriverSingleton;
+
+import static org.testng.Assert.assertEquals;
 public class LoginTests {
 
     //protected EventFiringWebDriver driver;

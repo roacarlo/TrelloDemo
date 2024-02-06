@@ -1,15 +1,19 @@
 package singleton;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
-import utils.EventReporter;
+//import static org.assertj.core.api.Assertions.assertThat;
+
+//import org.openqa.selenium.support.events.EventFiringWebDriver;
+//import utils.EventReporter;
 
 public abstract class LocalDriverFactory{
 
-    private static EventFiringWebDriver driver;
+    //05/02/2024 private static EventFiringWebDriver driver;
+    static WebDriver driver;
 
     public static WebDriver createInstance(String browserName,Boolean headless) {
 
@@ -25,14 +29,18 @@ public abstract class LocalDriverFactory{
         }*/
 
         if (browserName.toLowerCase().contains("chrome")) {
-            //System.setProperty("webdriver.chrome.driver","C:\\Users\\s.gainewar\\Documents\\Custom Office Templates\\chromedriver_win32\\chromedriver.exe");
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-            //driver = new ChromeDriver();
-            // nuevo
+            /* 05/02/2024 System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
             driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions(headless)));
             driver.register(new EventReporter());
 
-            Dimension newDimension = new Dimension(1950, 1100);
+            Dimension newDimension = new Dimension(1950, 1200);
+            driver.manage().window().setSize(newDimension);
+            driver.get("https://trello.com/");*/
+
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            //driver = new WebDriver(new ChromeDriver(getChromeOptions(headless)));
+            Dimension newDimension = new Dimension(1950, 1200);
             driver.manage().window().setSize(newDimension);
             driver.get("https://trello.com/");
 

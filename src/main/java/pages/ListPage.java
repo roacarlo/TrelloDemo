@@ -24,14 +24,14 @@ public class ListPage {
     }
     // List
     public ListPage clickAddList(){
-        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(nameBoardCreate)).getText();
+        //new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(nameBoardCreate)).getText();
         new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(linkAddList)).click();
         return new ListPage(driver);
     }
 
     public void setNameList(String listname){
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(board)).click();
-        driver.findElement(nameListField).click();
+        //new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(board)).click();
+        //driver.findElement(nameListField).click();
         driver.findElement(nameListFieldInput).sendKeys(listname);
     }
     public ListPage clickCreateList(){
