@@ -1,4 +1,4 @@
-name: demo_Trello_Maven 
+name: Trello_Maven_2024
 on:
   push:
     branches: [ master ]
@@ -12,13 +12,15 @@ jobs:
  
     steps:
     - uses: actions/checkout@v4    
-    - name: Set up JDK 19
+    - name: Set up JDK 19 #Entorno y versión de Java en el que se ejecutará
       uses: actions/setup-java@v3
       with:
+        distribution: 'temurin' #Eclipse Temurin
         java-version: '19'
-        distribution: 'temurin'    
+        #cache: 'maven'
+        #cache-dependency-path: 'sub-project/pom.xml' # optional
         
-    - name: Build with Maven      
+    - name: Ejecutar "testng.xml"      
       run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
       #run: mvn 'clean install test -Dsurefire.suiteXmlFiles=testng.xml'
       #run: mvn clean test -DmyTestNGFile=testng.xml
