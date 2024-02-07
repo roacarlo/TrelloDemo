@@ -17,8 +17,8 @@ jobs:
       with:
         distribution: 'temurin' #Eclipse Temurin
         java-version: '19'
-        cache: 'maven'
-        cache-dependency-path: 'sub-project/pom.xml' # optional
+        #cache: 'maven'
+        #cache-dependency-path: 'sub-project/pom.xml' # optional
         
     #- name: Build with Maven      
       #run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
