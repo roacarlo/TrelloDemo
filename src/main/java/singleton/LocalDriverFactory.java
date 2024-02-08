@@ -37,7 +37,7 @@ public abstract class LocalDriverFactory{
             driver.get("https://trello.com/");*/
 
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--lang=es"); // Establece el idioma a español
+            options.addArguments("--lang=es"); // Por defecto el idioma del navegador será: Español
 
             options.addArguments("disable-infobars");
             options.setHeadless(headless);//Configurar modo headless

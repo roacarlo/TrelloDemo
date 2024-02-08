@@ -26,8 +26,6 @@ public class LoginTests {
         loginPage.setPassword(password);
         loginPage.clicLoginButton();
         assertEquals(loginPage.getTitleHomeTrello(),"TUS ESPACIOS DE TRABAJO");
-        //assertEquals(loginPage.getTitleHomeTrello(),"YOUR WORKSPACES");
-
         loginPage.clicPerfil();
         assertEquals(loginPage.getEmailUser(),username);
     }

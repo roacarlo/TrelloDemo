@@ -28,7 +28,7 @@ public class BoardPage {
 
 
     public BoardPage linkAddBoard(){
-        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(linkAddBoard)).click();
+        new WebDriverWait(driver, 40).until(ExpectedConditions.elementToBeClickable(linkAddBoard)).click();
         return new BoardPage(driver);
     }
     public void setTitleBoard(String titleBoard){
