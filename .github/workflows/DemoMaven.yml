@@ -20,9 +20,13 @@ jobs:
         #cache: 'maven'
         #cache-dependency-path: 'sub-project/pom.xml' # optional
         
-    - name: Ejecutar "testng.xml"      
+    - name: Ejecutar "testng.xml" con Maven
+      run: mvn clean install
+    - name: Ejecutar pruebas con TestNG
+      run: mvn test -Dsurefire.suiteXmlFiles=testng.xml
+    #- name: Ejecutar "testng.xml"      
       #run: mvn clean install test -Dsurefire.suiteXmlFiles=testng.xml
-      run: mvn 'clean install test -dsurefire.suitexmlfiles=testng.xml'
+      #run: mvn 'clean install test -dsurefire.suitexmlfiles=testng.xml'
       #run: mvn 'clean install test -Dsurefire.suiteXmlFiles=testng.xml'
       #run: mvn clean test -DmyTestNGFile=testng.xml
       #run: mvn clean test -DxmlFilePath=src/main/java/testng.xml
