@@ -1,5 +1,5 @@
-name: Trello_Maven_2024
-on:
+name: Trello_Maven_2024 #nombre flujo de trabajo
+on: #activar el flujo de trabajo
   push:
     branches: [ master ]
   pull_request:
@@ -8,7 +8,7 @@ on:
 jobs:
   build:
  
-    runs-on: windows-latest
+    runs-on: windows-latest # Ejecutar sobre una imágen del sistema operativo Windows (las imágenes son las imágenes estables más recientes que proporciona GitHub)
  
     steps:
     - uses: actions/checkout@v4    
@@ -20,8 +20,16 @@ jobs:
         #cache: 'maven'
         #cache-dependency-path: 'sub-project/pom.xml' # optional
         
-    - name: Ejecutar "testng.xml"      
-      run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
+    - name: Compilar y empaquetar el proyecto
+      run: mvn clean install
+    - name: Ejecutar pruebas con testng.xml
+      run: mvn test -Dsurefire.suiteXmlFiles=testng.xml
+
+
+      
+    #- name: Ejecutar "testng.xml"      
+      #run: mvn clean install test -Dsurefire.suiteXmlFiles=testng.xml
+      #run: mvn 'clean install test -dsurefire.suitexmlfiles=testng.xml'
       #run: mvn 'clean install test -Dsurefire.suiteXmlFiles=testng.xml'
       #run: mvn clean test -DmyTestNGFile=testng.xml
       #run: mvn clean test -DxmlFilePath=src/main/java/testng.xml
