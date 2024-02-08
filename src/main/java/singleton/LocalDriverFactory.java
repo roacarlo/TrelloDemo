@@ -5,7 +5,6 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-//import static org.assertj.core.api.Assertions.assertThat;
 
 //import org.openqa.selenium.support.events.EventFiringWebDriver;
 //import utils.EventReporter;
@@ -37,11 +36,18 @@ public abstract class LocalDriverFactory{
             driver.manage().window().setSize(newDimension);
             driver.get("https://trello.com/");*/
 
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--lang=es"); // Establece el idioma a español
+
+            options.addArguments("disable-infobars");
+            options.setHeadless(headless);//Configurar modo headless
+
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
             //driver = new WebDriver(new ChromeDriver(getChromeOptions(headless)));
             Dimension newDimension = new Dimension(1950, 1200);
             driver.manage().window().setSize(newDimension);
+
             driver.get("https://trello.com/");
 
             return driver;
@@ -52,13 +58,13 @@ public abstract class LocalDriverFactory{
 
 
     //Configurar el navegador, por defecto Headless=false --> abre navegador
-    static ChromeOptions getChromeOptions(Boolean modeHeadless){
+    /*static ChromeOptions getChromeOptions(Boolean modeHeadless){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("disable-infobars");
         options.setHeadless(modeHeadless);
         //options.setHeadless(false);
         return options;
-    }
+    }*/
 
 
 }
