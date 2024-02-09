@@ -8,7 +8,8 @@ on: #activar el flujo de trabajo
 jobs:
   build:
  
-    runs-on: windows-latest # Ejecutar sobre una imágen del sistema operativo Windows (las imágenes son las imágenes estables más recientes que proporciona GitHub)
+    runs-on: windows-latest # Ejecutar sobre una imágen del sistema operativo Windows 
+    ##(las imágenes son las estables y más recientes que proporciona GitHub)
  
     steps:
     - uses: actions/checkout@v4    
@@ -17,23 +18,8 @@ jobs:
       with:
         distribution: 'temurin' #Eclipse Temurin
         java-version: '19'
-        #cache: 'maven'
-        #cache-dependency-path: 'sub-project/pom.xml' # optional
         
     - name: Compilar y empaquetar el proyecto
       run: mvn clean install
     - name: Ejecutar pruebas con testng.xml
       run: mvn test -Dsurefire.suiteXmlFiles=testng.xml
-
-
-      
-    #- name: Ejecutar "testng.xml"      
-      #run: mvn clean install test -Dsurefire.suiteXmlFiles=testng.xml
-      #run: mvn 'clean install test -dsurefire.suitexmlfiles=testng.xml'
-      #run: mvn 'clean install test -Dsurefire.suiteXmlFiles=testng.xml'
-      #run: mvn clean test -DmyTestNGFile=testng.xml
-      #run: mvn clean test -DxmlFilePath=src/main/java/testng.xml
-      #run: mvn -B package --file pom.xml
-      
-      #run: mvn -B package --file testng.xml
-      #run: mvn clean test -Dsurefire.suiteXmlFiles=/path/to/testng.xml
