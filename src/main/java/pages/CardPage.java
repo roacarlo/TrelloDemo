@@ -2,8 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CardPage {
 
@@ -23,14 +23,16 @@ public class CardPage {
 
     // Card
     public CardPage clickAddCard(){
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(AddCard)).click();
+        //new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(AddCard)).click();
+        driver.findElement(AddCard).click();
         return new CardPage(driver);
     }
     public void  setNameCard(String nameCard){
         driver.findElement(nameCardField).sendKeys(nameCard);
     }
     public CardPage clickCreateCard(){
-        driver.findElement(AddCard).click();
+        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(AddCard)).click();
+        //driver.findElement(AddCard).click();
         driver.findElement(createAddCard).click();
         //new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(createAddCard)).click();
         return new CardPage(driver);

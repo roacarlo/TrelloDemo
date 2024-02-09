@@ -14,7 +14,7 @@ public class ListPage {
 
     private final By board = By.xpath("//*[@id=\"board\"]");
     private final By nameListField = By.xpath("//*[@id=\"board\"]/div/button");
-    private final By nameListFieldInput = By.xpath("//*[@id=\"board\"]/div[1]/form/textarea");
+    private final By nameListFieldInput = By.xpath("//*[@class=\"oe8RymzptORQ7h\"]");
 
     private final By buttonAddList = By.xpath("//*[@id=\"board\"]//*[@class='bxgKMAm3lq5BpA SdamsUKjxSBwGb SEj5vUdI3VvxDc']");
     private final By nameListCreate = By.xpath("//*[@id=\"board\"]//*[@class='KLvU2mDGTQrsWG']");
@@ -30,7 +30,7 @@ public class ListPage {
     }
 
     public void setNameList(String listname){
-        //new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(board)).click();
+        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(nameListFieldInput)).click();
         //driver.findElement(nameListField).click();
         driver.findElement(nameListFieldInput).sendKeys(listname);
     }

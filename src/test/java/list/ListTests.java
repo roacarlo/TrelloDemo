@@ -17,7 +17,7 @@ public class ListTests {
         driver = DriverSingleton.getDriver();
         listPage = new ListPage(driver);
 
-        //listPage.clickAddList();
+//        listPage.clickAddList();
         listPage.setNameList(listname);
         listPage.clickCreateList();
         assertEquals(listPage.getNameList(),listname);

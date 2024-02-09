@@ -20,6 +20,7 @@ public class CardTests {
 
         cardPage.clickAddCard();
         cardPage.setNameCard(titleCard);
+
         cardPage.clickCreateCard();
         assertEquals(cardPage.getNameCardCreate(),titleCard);
     }
