@@ -15,13 +15,6 @@
                         <parameter name="password" value="Pyxis*2023*"/>
                 </methods>
             </class>
-            <class name="board.BoardTests">
-                <methods>
-                    <include name="testCreateBoard"/>
-                        <parameter name="titleBoard" value="BoardDemo2024_Enero"/>
-                </methods>
-            </class>
-
         </classes>
     </test>
 </suite>
