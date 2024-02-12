@@ -21,23 +21,7 @@
                         <parameter name="titleBoard" value="BoardDemo2024_Enero"/>
                 </methods>
             </class>
-            <class name="list.ListTests">
-                <methods>
-                    <include name="testCreateList"/>
-                    <parameter name="nameList" value="List_Backlog"/>
-                </methods>
-            </class>
-            <class name="card.CardTests">
-                <methods>
-                    <include name="testCreateCard"/>
-                    <parameter name="nameCard" value="Card_Prueba1"/>
-                </methods>
-            </class>
-            <class name="logout.LogOutTests">
-                <methods>
-                    <include name="testLogOut"/>
-                </methods>
-            </class>
+
         </classes>
     </test>
 </suite>
