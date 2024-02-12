@@ -8,9 +8,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BoardPage {
     private WebDriver driver;
 
-    //Board
-    //private final By btnClosePerfil = By.xpath("//*[@id=\"BXP-APP\"]//*[@class = \"Buttonsstyles__Button-sc-1jwidxo-0 kTwZBr\"]");
-    private final By btnClosePerfil = By.xpath("//*[@class = \"board-tile mod-add\"]");
     private final By linkAddBoard = By.xpath("//*[@class=\"board-tile mod-add\"]");
     private final By txtTitleBoardField = By.xpath("//*[@class = \"nch-textfield__input lsOhPsHuxEMYEb lsOhPsHuxEMYEb VkPAAkbpkKnPst\"]");
     private final By buttonCreateBoard = By.xpath("//*[@class=\"hY6kPzdkHFJhfG bxgKMAm3lq5BpA SdamsUKjxSBwGb SEj5vUdI3VvxDc\"]");

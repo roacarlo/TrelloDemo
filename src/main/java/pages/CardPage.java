@@ -23,18 +23,19 @@ public class CardPage {
 
     // Card
     public CardPage clickAddCard(){
-        //new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(AddCard)).click();
-        driver.findElement(AddCard).click();
+        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(AddCard)).click();
+        //driver.findElement(AddCard).click();
         return new CardPage(driver);
     }
     public void  setNameCard(String nameCard){
         driver.findElement(nameCardField).sendKeys(nameCard);
     }
     public CardPage clickCreateCard(){
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(AddCard)).click();
+        //new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(AddCard)).click();
+
         //driver.findElement(AddCard).click();
-        driver.findElement(createAddCard).click();
-        //new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(createAddCard)).click();
+        //driver.findElement(createAddCard).click();
+        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(createAddCard)).click();
         return new CardPage(driver);
     }
     public String getNameCardCreate(){
