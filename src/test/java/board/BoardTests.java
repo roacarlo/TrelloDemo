@@ -16,7 +16,9 @@ public class BoardTests{
         driver = DriverSingleton.getDriver();
         boardPage = new BoardPage(driver);
 
-        boardPage.linkAddBoard();
+        String mainWindowHandle = driver.getWindowHandle();
+
+        boardPage.linkAddBoard(mainWindowHandle);
         boardPage.setTitleBoard(title);
         boardPage.clicCreateButtonBoard();
         assertEquals(boardPage.getTittleBoardNew(),title);
