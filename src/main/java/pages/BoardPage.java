@@ -24,19 +24,7 @@ public class BoardPage {
 
 
 
-    public BoardPage linkAddBoard(String mainWindowHandle){
-        // Cambiar al contexto de la ventana emergente
-        for (String handle : driver.getWindowHandles()) {
-            if (!handle.equals(mainWindowHandle)) {
-                driver.switchTo().window(handle);
-                break;
-            }
-        }
-        // Realizar acciones en la ventana emergente (por ejemplo, cerrarla)
-        //driver.close();
-
-        // Volver al contexto de la ventana principal (si es necesario)
-        driver.switchTo().window(mainWindowHandle);
+    public BoardPage linkAddBoard(){
 
         new WebDriverWait(driver, 40).until(ExpectedConditions.elementToBeClickable(linkAddBoard)).click();
         return new BoardPage(driver);
