@@ -1,4 +1,4 @@
-name: Trello_Maven_2024 #nombre flujo de trabajo
+name: Trello_Maven_2024_1 #nombre flujo de trabajo
 on: #activar el flujo de trabajo
   push:
     branches: [ master ]
