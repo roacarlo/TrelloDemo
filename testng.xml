@@ -5,14 +5,37 @@
         <listener class-name="singleton.WebDriverListener">  </listener>
     </listeners>
     <test verbose="2" preserve-order="true" name="C:/Users/Carlos Roa/Desktop/webdriver_java">
-            <parameter name="browserName" value="chrome"/>
-            <parameter name="modeHeadless" value="false"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="modeHeadless" value="false"/>
         <classes>
             <class name="login.LoginTests">
                 <methods>
                     <include name="testLogin"/>
-                        <parameter name="username" value="carlos.roa@pyxis.tech"/>
-                        <parameter name="password" value="Pyxis*2023*"/>
+                    <parameter name="username" value="carlos.roa@pyxis.tech"/>
+                    <parameter name="password" value="Pyxis*2023*"/>
+                </methods>
+            </class>
+            <class name="board.BoardTests">
+                <methods>
+                    <include name="testCreateBoard"/>
+                    <parameter name="titleBoard" value="BoardDemo2024_Enero"/>
+                </methods>
+            </class>
+            <class name="list.ListTests">
+                <methods>
+                    <include name="testCreateList"/>
+                    <parameter name="nameList" value="List_Backlog"/>
+                </methods>
+            </class>
+            <class name="card.CardTests">
+                <methods>
+                    <include name="testCreateCard"/>
+                    <parameter name="nameCard" value="Card_Prueba1"/>
+                </methods>
+            </class>
+            <class name="logout.LogOutTests">
+                <methods>
+                    <include name="testLogOut"/>
                 </methods>
             </class>
         </classes>
