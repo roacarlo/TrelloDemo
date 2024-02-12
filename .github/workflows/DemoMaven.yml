@@ -22,4 +22,5 @@ jobs:
     - name: Compilar y empaquetar el proyecto
       run: mvn clean install
     - name: Ejecutar pruebas con testng.xml
-      run: mvn test -Dsurefire.suiteXmlFiles=testng.xml
+      run: mvn test
+      #run: mvn test -Dsurefire.suiteXmlFiles=testng.xml
