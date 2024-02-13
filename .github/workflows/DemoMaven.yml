@@ -6,7 +6,7 @@ on: #activar el flujo de trabajo
     branches: [ master ]
  
 jobs:
-  build:
+  trello:
  
     runs-on: windows-latest # Ejecutar sobre una imágen del sistema operativo Windows 
     ##(las imágenes son las estables y más recientes que proporciona GitHub)
