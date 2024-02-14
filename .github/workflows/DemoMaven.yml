@@ -24,3 +24,8 @@ jobs:
     - name: Ejecutar pruebas con testng.xml
       run: mvn test #Ejecutar los test del "testng.xml"
       #run: mvn test -Dsurefire.suiteXmlFiles=testng.xml
+    - name: Exportar Screenshot
+      uses: actions/upload-artifact@v3
+      with:
+       name: Screenshot
+       path: testArtifacts
